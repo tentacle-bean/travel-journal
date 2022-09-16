@@ -1,0 +1,21 @@
+.header{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: var(--clr-accent);
+    justify-content: center;
+    font-size: var(--fs-header);
+    padding: 1.25em;
+}
+
+.header-title{
+    font-size: inherit;
+    color: var(--clr-bg);
+    font-weight: var(--fw-m);
+}
+
+.header-icon{
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: 0.5em;
+}

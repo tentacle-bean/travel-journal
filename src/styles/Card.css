@@ -1,0 +1,76 @@
+.card{
+    display: grid;
+    grid-template-columns: 150px max-content max-content 1fr;
+    grid-template-rows: 1.5em repeat(4, auto) 1.5em;
+    grid-template-areas: 
+        "image . . ."
+        "image location maps ."
+        "image title title title"
+        "image dates dates dates"
+        "image desc desc desc"
+        "image . . .";
+    column-gap: 1.5em;
+    align-items: center;
+    padding: 1.5em 0;
+    border-bottom: 2px solid rgba(0,0,0, 0.05);
+}
+
+.card:last-child{
+    padding-bottom: 0;
+    border: none;
+}
+
+.card-img{
+    grid-area: image;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.card-location{
+    display: flex;
+    grid-area: location;
+    align-items: center;
+}
+
+.card-location-icon{
+    height: 0.8em;
+    width: unset;
+    aspect-ratio:initial;
+    margin-right: 0.25em;
+}
+
+.card-location-name{
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.card-link{
+    grid-area: maps;
+    font-size: var(--fs-p);
+    color: var(--clr-mid);
+}
+
+.card-link:hover,
+.card-link:focus{
+    color: var(--clr-dark);
+}
+
+.card-name{
+    grid-area: title;
+    font-size: var(--fs-title);
+    margin-top: 0.4em;
+}
+
+.card-duration{
+    grid-area: dates;
+    font-weight: var(--fw-b);
+    margin-top: 2em;
+}
+
+.card-description{
+    grid-area: desc;
+    margin-top: 1em;
+    line-height: 150%;
+}

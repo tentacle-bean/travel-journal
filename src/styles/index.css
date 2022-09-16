@@ -1,0 +1,42 @@
+:root{
+    --ff: 'Inter', sans-serif;
+
+    --fs-header: 0.9rem;
+    --fs-title: 1.5625rem;
+    --fs-p: 0.8rem;
+
+    --fw-b: 700;
+    --fw-m: 500;
+    --fw-r: 400;
+
+    --clr-bg: white;
+    --clr-accent: #F55A5A;
+    --clr-mid: #918E9B;
+    --clr-dark: #2B283A;
+}
+
+*{
+    box-sizing: content-box;
+}
+
+img{
+    width: 100%;
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--ff);
+    color: var(--clr-dark);
+}
+
+h1,h2,p,a{
+    margin: 0;
+}
+
+p{
+    font-size: var(--fs-p);
+}
