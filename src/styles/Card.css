@@ -1,15 +1,15 @@
 .card{
     display: grid;
-    grid-template-columns: 150px max-content max-content 1fr;
-    grid-template-rows: 1.5em repeat(4, auto) 1.5em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto) 1em 150px;
     grid-template-areas: 
-        "image . . ."
-        "image location maps ."
-        "image title title title"
-        "image dates dates dates"
-        "image desc desc desc"
-        "image . . .";
-    column-gap: 1.5em;
+        "location maps"
+        "title title"
+        "dates dates"
+        "desc desc"
+        ". ."
+        "image image";
+    column-gap: 0.5em;
     align-items: center;
     padding: 1.5em 0;
     border-bottom: 2px solid rgba(0,0,0, 0.05);
@@ -50,6 +50,7 @@
     grid-area: maps;
     font-size: var(--fs-p);
     color: var(--clr-mid);
+    justify-self: end;
 }
 
 .card-link:hover,
@@ -73,4 +74,19 @@
     grid-area: desc;
     margin-top: 1em;
     line-height: 150%;
+}
+
+@media (min-width: 450px){
+    .card{
+        grid-template-columns: 150px repeat(2, minmax(min-content, max-content)) 1fr;
+        grid-template-rows: 1.5em repeat(4, auto) 1.5em;
+        grid-template-areas: 
+            "image . . ."
+            "image location maps ."
+            "image title title title"
+            "image dates dates dates"
+            "image desc desc desc"
+            "image . . .";
+        column-gap: 1.5em;
+    }
 }
